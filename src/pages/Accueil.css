@@ -13,7 +13,7 @@
   height: 250px; /* Hauteur réduite pour faire un vrai effet "bannière" fine */
   
   /* On charge TON image ici ! */
-  background-image: url('/images/bann_accueil.png'); 
+  background-image: url('/casa_fatima/images/bann_accueil.png'); 
   background-size: cover;
   background-position: center; /* Centre l'image pour voir le meilleur endroit */
   

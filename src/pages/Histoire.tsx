@@ -2,10 +2,10 @@ import './Histoire.css';
 
 export default function Histoire() {
   // Définition des chemins vers tes images (puisqu'elles sont dans /public/images/)
-  const imageMotif = "/images/bg_motif_bleu.png";
-  const photoSisters1 = "/images/photo_sisters_1.png";
-  const photoSisters2 = "/images/photo_sisters_2.png";
-  const photoPortugal = "/images/photo_portugal.png";
+  const imageMotif = "/casa_fatima/images/bg_motif_bleu.png";
+  const photoSisters1 = "/casa_fatima/images/photo_sisters_1.png";
+  const photoSisters2 = "/casa_fatima/images/photo_sisters_2.png";
+  const photoPortugal = "/casa_fatima/images/photo_portugal.png";
 
   return (
     // 1. Le conteneur principal de la page qui gère les grandes bordures azulejos laterales

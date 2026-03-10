@@ -21,7 +21,7 @@ export default function Navigation() {
         
         <div className="logo-container">
           <Link to="/">
-            <img src="/images/logo_accueil.png" alt="Logo Casa Fátima" className="logo-image" />
+            <img src="/casa_fatima/images/logo_accueil.png" alt="Logo Casa Fátima" className="logo-image" />
           </Link>
         </div>
 
