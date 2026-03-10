@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './Navigation.css';
 import { Link } from 'react-router-dom';
+import './Navigation.css';
 
 export default function Navigation() {
   // Gère l'ouverture du menu latéral (mobile)
@@ -35,7 +35,11 @@ export default function Navigation() {
       {menuOuvert && (
         <nav className="menu-dore">
           <ul className="liste-menu">
-            <li className="item-menu"><a href="/">ACCUEIL</a></li>
+            
+            {/* L'accueil corrigé avec un Link */}
+            <li className="item-menu">
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>ACCUEIL</Link>
+            </li>
             
             {/* Menu avec sous-catégories */}
             <li className="item-menu">
@@ -49,33 +53,32 @@ export default function Navigation() {
               {/* Le sous-menu qui s'affiche au clic */}
               {bijouxOuvert && (
                 <ul className="sous-menu">
-                  {/* Le lien vers la boutique globale */}
                   <li>
                     <Link to="/boutique" style={{ textDecoration: 'none', color: 'inherit' }}>
                       BOUTIQUE
                     </Link>
                   </li>
-  
-                  {/* Les liens filtrés */}
-                  <li><Link to="/boutique/bagues" style={{ textDecoration: 'none' }}><span>v</span> BAGUES</Link></li>
-                  <li><Link to="/boutique/bracelets" style={{ textDecoration: 'none' }}><span>v</span> BRACELETS</Link></li>
-                  <li><Link to="/boutique/boucles" style={{ textDecoration: 'none' }}><span>v</span> BOUCLES D'OREILLES</Link></li>
-                  <li><Link to="/boutique/colliers" style={{ textDecoration: 'none' }}><span>v</span> COLLIERS</Link></li>
+                  {/* J'ai ajouté color: inherit pour éviter qu'ils ne deviennent bleus */}
+                  <li><Link to="/boutique/bagues" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> BAGUES</Link></li>
+                  <li><Link to="/boutique/bracelets" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> BRACELETS</Link></li>
+                  <li><Link to="/boutique/boucles" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> BOUCLES D'OREILLES</Link></li>
+                  <li><Link to="/boutique/colliers" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> COLLIERS</Link></li>
                 </ul>
               )}
             </li>
 
-            <li>
+            {/* LES VOICI : J'ai remis les className="item-menu" ici ! */}
+            <li className="item-menu">
               <Link to="/personnalisation" style={{ textDecoration: 'none', color: 'inherit' }}>
                 PERSONNALISEZ VOTRE BIJOU
               </Link>
             </li>
-            <li>
+            <li className="item-menu">
               <Link to="/histoire" style={{ textDecoration: 'none', color: 'inherit' }}>
                 NOTRE HISTOIRE
               </Link>
             </li>
-            <li>
+            <li className="item-menu">
               <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
                 CONTACT
               </Link>
