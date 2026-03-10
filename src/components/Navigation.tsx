@@ -50,7 +50,11 @@ export default function Navigation() {
               {bijouxOuvert && (
                 <ul className="sous-menu">
                   {/* Le lien vers la boutique globale */}
-                  <li><Link to="/boutique" style={{ textDecoration: 'none' }}><span>v</span> TOUS NOS BIJOUX</Link></li>
+                  <li>
+                    <Link to="/boutique" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      BOUTIQUE
+                    </Link>
+                  </li>
   
                   {/* Les liens filtrés */}
                   <li><Link to="/boutique/bagues" style={{ textDecoration: 'none' }}><span>v</span> BAGUES</Link></li>
@@ -61,9 +65,21 @@ export default function Navigation() {
               )}
             </li>
 
-            <li className="item-menu"><a href="/personnalisation">PERSONNALISEZ VOTRE BIJOU</a></li>
-            <li className="item-menu"><a href="/histoire">NOTRE HISTOIRE</a></li>
-            <li className="item-menu"><a href="/contact">CONTACT</a></li>
+            <li>
+              <Link to="/personnalisation" style={{ textDecoration: 'none', color: 'inherit' }}>
+                PERSONNALISEZ VOTRE BIJOU
+              </Link>
+            </li>
+            <li>
+              <Link to="/histoire" style={{ textDecoration: 'none', color: 'inherit' }}>
+                NOTRE HISTOIRE
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                CONTACT
+              </Link>
+            </li>
           </ul>
         </nav>
       )}
