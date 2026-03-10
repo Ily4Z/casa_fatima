@@ -1,0 +1,56 @@
+.boutique-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.titre-page {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+  color: var(--mer-bleu, #1A5B7E);
+  margin-bottom: 10px;
+}
+
+.sous-titre-page {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.grille-produits {
+  display: grid;
+  /* Crée une grille réactive : les cartes font au moins 250px de large */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.carte-produit {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carte-produit:hover {
+  transform: translateY(-5px); /* Petit effet de soulèvement au survol */
+}
+
+.image-produit-placeholder {
+  height: 300px;
+  background-color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.nom-produit {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: normal;
+}
+
+.prix-produit {
+  color: #555;
+  margin-top: 5px;
+}

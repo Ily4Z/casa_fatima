@@ -1,0 +1,188 @@
+/* Conteneur principal : coupe l'écran en deux (gauche/droite) */
+.bijou-detail-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--blanc-pur);
+}
+
+/* --- ZONE GAUCHE : GALERIE --- */
+.galerie-images {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.thumbnail-placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.image-principale {
+  flex: 1;
+  border: 2px solid var(--mer-bleu); /* Cadre façon azulejo */
+  padding: 5px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 500px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- ZONE DROITE : INFOS --- */
+.bijou-infos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Titre élégant avec empattements */
+.bijou-titre {
+  font-family: 'Times New Roman', Times, serif; /* Pour le côté chic de la maquette */
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: -10px;
+}
+
+.bijou-prix {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.label-bleu {
+  color: #5b6c8a; /* Le petit bleu grisé de ta maquette */
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+/* Boutons Or et Argent */
+.boutons-couleur {
+  display: flex;
+  gap: 15px;
+}
+
+.boutons-couleur button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.boutons-couleur button.actif {
+  border-color: #000;
+  font-weight: bold;
+}
+
+.pastille-or {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f9d976 0%, #e9b646 100%);
+}
+
+.pastille-argent {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 100%);
+}
+
+/* Quantité et Ajout au panier */
+.ligne-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.selecteur-quantite {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 15px;
+  gap: 15px;
+}
+
+.selecteur-quantite button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.bouton-ajouter {
+  background-color: #ffb6c1; /* Le rose doux de ta maquette */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 40px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.bouton-favori {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Accordéons */
+.accordions {
+  margin-top: 20px;
+  border-top: 1px solid #000;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #000;
+}
+
+.accordion-titre {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 15px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accordion-contenu {
+  padding-bottom: 15px;
+  color: #555;
+  font-size: 0.9rem;
+}

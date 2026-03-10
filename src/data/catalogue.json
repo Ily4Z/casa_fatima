@@ -1,0 +1,47 @@
+[
+  {
+    "id": "b-01",
+    "nom": "Bague Coimbra",
+    "categorie": "bague",
+    "prix": 45.00,
+    "description": "Bague fine avec un motif rappelant les ruelles de Coimbra.",
+    "image": "/images/bague-coimbra.jpg",
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-01",
+    "nom": "Boucles d'oreilles Nazaré",
+    "categorie": "boucles",
+    "prix": 35.00,
+    "description": "Créoles ornées de perles bleues inspirées par l'océan.",
+    "image": "/images/boucles-nazare.jpg",
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "base-col-01",
+    "nom": "Chaîne Héritage (Base)",
+    "categorie": "base_collier",
+    "prix": 30.00,
+    "description": "La chaîne parfaite, prête à accueillir vos plus beaux souvenirs.",
+    "image": "/images/chaine-heritage.jpg",
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "charm-01",
+    "nom": "Charm Cœur de Fátima",
+    "categorie": "charm",
+    "prix": 15.00,
+    "description": "Un petit cœur gravé, symbole de l'amour familial.",
+    "image": "/images/charm-coeur.jpg",
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "charm-02",
+    "nom": "Charm Azulejo",
+    "categorie": "charm",
+    "prix": 18.00,
+    "description": "Un charm reprenant les motifs traditionnels portugais.",
+    "image": "/images/charm-azulejo.jpg",
+    "materiaux": ["or", "argent"]
+  }
+]

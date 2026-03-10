@@ -1,0 +1,119 @@
+/* Barre de navigation principale (Header) */
+.navbar {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  background-color: var(--blanc-pur, #fff);
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.bouton-hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #cda434; /* Couleur dorée */
+  cursor: pointer;
+}
+
+.logo-container h2 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #cda434;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.icones-droite {
+  display: flex;
+  gap: 15px;
+}
+
+.icone {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #cda434;
+  cursor: pointer;
+}
+
+/* --- LE MENU DÉROULANT DORÉ --- */
+.menu-dore {
+  background-color: #d4ad4b; /* La couleur moutarde/dorée de ta maquette */
+  width: 100%;
+  max-width: 400px; /* Pour ne pas prendre tout l'écran sur PC */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.liste-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-menu {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.item-menu a,
+.bouton-sous-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* --- LE SOUS-MENU (Nos Bijoux) --- */
+.sous-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #d4ad4b; /* Même couleur */
+}
+
+.sous-menu li {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sous-menu a {
+  padding: 15px 20px 15px 40px; /* Décalé vers la droite pour montrer la hiérarchie */
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sous-menu a span {
+  font-size: 1.2rem;
+  transform: scaleX(1.5); /* Pour faire un "v" un peu écrasé comme sur ton image */
+  font-weight: 300;
+}
+
+/* --- LE LOGO EN IMAGE --- */
+.logo-image {
+  height: 150px; /* Tu pourras modifier ce chiffre pour l'agrandir ou le rétrécir */
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05); /* Petit effet de zoom élégant quand on passe la souris dessus */
+}

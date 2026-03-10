@@ -1,0 +1,98 @@
+/* --- LE CONTENEUR GLOBAL --- */
+.histoire-page-global-wrapper {
+  width: 100%;
+  min-height: 100vh; /* Prend toute la hauteur de l'écran */
+  
+  /* C'est ici qu'on gère les grandes bordures azulejos latérales de la page */
+  /* On utilise l'image bg_motif_bleu.png qui se répète verticalement sur les côtés gauche et droit */
+  background-image: 
+    url('/images/bg_motif_bleu.png'), 
+    url('/images/bg_motif_bleu.png');
+  background-position: left top, right top; /* Position à gauche et à droite */
+  background-repeat: repeat-y, repeat-y; /* Répétition uniquement à la verticale */
+  background-size: contain, contain; /* Ajuste la taille de l'image pour qu'elle soit nette */
+  
+  display: flex;
+  justify-content: center; /* Centre le contenu central */
+  padding: 40px 0; /* Un peu d'espace en haut et en bas de la page */
+}
+
+/* --- LE BLOC CENTRAL TEXTURÉ (Beige/Papier) --- */
+.histoire-central-content-block {
+  background-color: #F8F4EA; /* Le beige clair texturé de ton image */
+  width: 85%; /* Occupe la majeure partie de la largeur entre les bordures bleues */
+  max-width: 1100px; /* Ne s'élargit pas trop sur les grands écrans PC */
+  padding: 50px; /* Espace interne généreux autour du contenu */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Légère ombre pour donner du relief */
+  border-radius: 5px; /* Coins très légèrement arrondis */
+}
+
+/* --- LE TITRE "Notre Histoire" --- */
+.histoire-main-title {
+  /* Typographie Grasset/Bodoni élégante comme sur ton image */
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 3rem;
+  font-weight: 800; /* Très gras */
+  color: #000;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+/* --- LA GRILLE PRINCIPALE (2 COLONNES) --- */
+.histoire-main-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
+  gap: 40px; /* Espace entre les deux colonnes */
+  align-items: start; /* Aligne le contenu vers le haut */
+}
+
+/* --- COLONNE GAUCHE (Texte) --- */
+.histoire-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Espace entre les paragraphes et la section photos */
+}
+
+.histoire-description-text {
+  /* Typographie propre et lisible pour le texte */
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6; /* Espace entre les lignes pour le confort de lecture */
+  color: #333;
+  text-align: justify; /* Aligne le texte à gauche et à droite pour un look propre */
+}
+
+/* --- SECTION PHOTOS DES SOEURS (Layout complexe) --- */
+.sisters-photos-row {
+  display: flex;
+  align-items: stretch; /* Les images prennent toute la hauteur du conteneur */
+  gap: 15px; /* Espace entre les éléments */
+  margin: 10px 0; /* Un peu d'espace au dessus et en dessous */
+}
+
+/* Les petits morceaux de motif azulejo de part et d'autre */
+.inner-azulejo-slice {
+  width: 30px; /* Très fin, juste une tranche */
+  object-fit: cover; /* Recadre l'image pour remplir la largeur */
+  border-radius: 3px; /* Coins légèrement arrondis */
+}
+
+/* Les portraits des soeurs Madeira */
+.sister-portrait {
+  flex: 1; /* Les deux photos prennent la même largeur disponible */
+  height: 150px; /* Hauteur fixe pour que tout soit aligné */
+  object-fit: cover; /* Recadre l'image sans la déformer */
+  border-radius: 3px; /* Coins légèrement arrondis */
+}
+
+/* --- COLONNE DROITE (La grande photo) --- */
+.histoire-right-column {
+  width: 100%;
+}
+
+.main-portugal-photo {
+  width: 100%;
+  height: auto; /* Garde les proportions de l'image */
+  object-fit: cover;
+  border-radius: 3px; /* Coins légèrement arrondis */
+}

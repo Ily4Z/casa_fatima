@@ -1,0 +1,30 @@
+:root {
+  /* La palette Casa Fátima */
+  --sable-beige: #F4EBD0;    /* Un beige doux et naturel pour le fond */
+  --mer-bleu: #1A5B7E;       /* Le bleu profond de l'océan à Nazaré */
+  --drapeau-rouge: #8B0000;  /* Un rouge sombre et élégant en petites touches */
+  --soleil-rose: #E6A8A8;    /* Un rose doux pour les survols (hover) */
+  --texte-fonce: #333333;    /* Gris très foncé pour un texte lisible et doux */
+  --blanc-pur: #FFFFFF;      /* Pour les cartes de bijoux */
+
+  /* Typographie de base */
+  --font-principale: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Réinitialisation de base pour un rendu propre */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--sable-beige);
+  color: var(--texte-fonce);
+  font-family: var(--font-principale);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--mer-bleu);
+}

@@ -1,0 +1,152 @@
+/* Fond général de la page (effet sable texturé de ta maquette) */
+.accueil-container {
+  background-color: var(--sable-beige, #F4EBD0);
+  /* Optionnel : si tu as une image de texture papier plus tard, on la mettra ici */
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* --- 1. HERO BANNER --- */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Hauteur réduite pour faire un vrai effet "bannière" fine */
+  
+  /* On charge TON image ici ! */
+  background-image: url('/images/bann_accueil.png'); 
+  background-size: cover;
+  background-position: center; /* Centre l'image pour voir le meilleur endroit */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%;
+  /* Optionnel : ajoute un très léger voile sombre derrière le texte pour qu'il soit toujours lisible peu importe ton image */
+  background: rgba(0, 0, 0, 0.2); 
+  padding: 40px 0;
+}
+
+.slogan {
+  /* On rend l'écriture beaucoup plus classe */
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 2.8rem;
+  font-weight: normal;
+  font-style: italic; /* L'italique donne un côté très haut de gamme/bijouterie */
+  letter-spacing: 2px;
+  color: white; /* Ou #F4EBD0 si tu veux rappeler le beige sable ! */
+  
+  /* Une belle ombre portée pour que le texte ressorte parfaitement sur la photo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
+  
+  margin-bottom: 20px;
+}
+
+.hero-pagination {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* --- 2. INTRO SECTION --- */
+.intro-section {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.ornement-azulejo {
+  color: var(--mer-bleu, #1A5B7E);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.texte-histoire {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.lien-decouvrir {
+  font-family: 'Times New Roman', Times, serif;
+  color: #666;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2px;
+}
+
+/* --- 3. CARROUSEL --- */
+.categories-carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.nav-arrow {
+  background-color: #0b153b; /* Le bleu très foncé de tes boutons */
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.categories-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-end; /* Aligne les images vers le bas pour reproduire l'effet de la maquette */
+  width: 100%;
+  overflow: hidden;
+}
+
+.categorie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Les images des extrémités sont un peu plus carrées/petites */
+.categorie-image-placeholder {
+  width: 220px;
+  height: 280px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  object-fit: cover;
+}
+
+/* L'image du centre est plus haute, comme sur ta maquette */
+.main-card .categorie-image-placeholder {
+  height: 350px; 
+}
+
+.categorie-titre {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: normal;
+}
