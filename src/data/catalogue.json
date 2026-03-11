@@ -1,47 +1,353 @@
 [
   {
-    "id": "b-01",
-    "nom": "Bague Coimbra",
-    "categorie": "bague",
-    "prix": 45.00,
-    "description": "Bague fine avec un motif rappelant les ruelles de Coimbra.",
-    "image": "/images/bague-coimbra.jpg",
-    "materiaux": ["or", "argent"]
-  },
-  {
-    "id": "bo-01",
-    "nom": "Boucles d'oreilles Nazaré",
-    "categorie": "boucles",
+    "id": "ba-almada",
+    "nom": "Bague Almada",
+    "categorie": "bagues",
     "prix": 35.00,
-    "description": "Créoles ornées de perles bleues inspirées par l'océan.",
-    "image": "/images/boucles-nazare.jpg",
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_almada_1.jpg", "/images/ba_almada_2.jpg"],
     "materiaux": ["or", "argent"]
   },
   {
-    "id": "base-col-01",
-    "nom": "Chaîne Héritage (Base)",
-    "categorie": "base_collier",
-    "prix": 30.00,
-    "description": "La chaîne parfaite, prête à accueillir vos plus beaux souvenirs.",
-    "image": "/images/chaine-heritage.jpg",
+    "id": "ba-leirira",
+    "nom": "Bague Leirira",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_leirira_1.jpg", "/images/ba_leirira_2.jpg"],
     "materiaux": ["or", "argent"]
   },
   {
-    "id": "charm-01",
-    "nom": "Charm Cœur de Fátima",
-    "categorie": "charm",
-    "prix": 15.00,
-    "description": "Un petit cœur gravé, symbole de l'amour familial.",
-    "image": "/images/charm-coeur.jpg",
+    "id": "ba-loriga",
+    "nom": "Bague Loriga",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_loriga_1.jpg"],
     "materiaux": ["or", "argent"]
   },
   {
-    "id": "charm-02",
-    "nom": "Charm Azulejo",
-    "categorie": "charm",
-    "prix": 18.00,
-    "description": "Un charm reprenant les motifs traditionnels portugais.",
-    "image": "/images/charm-azulejo.jpg",
+    "id": "ba-mafra",
+    "nom": "Bague Mafra",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_mafra_1.jpg", "/images/ba_mafra_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "ba-nisa",
+    "nom": "Bague Nisa",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_nisa_1.jpg", "/images/ba_nisa_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "ba-sintra",
+    "nom": "Bague Sintra",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_sintra_1.jpg", "/images/ba_sintra_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "ba-tavira",
+    "nom": "Bague Tavira",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_tavira_1.jpg", "/images/ba_tavira_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "ba-tomar",
+    "nom": "Bague Tomar",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_tomar_1.jpg", "/images/ba_tomar_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "ba-vilanova",
+    "nom": "Bague Vilanova",
+    "categorie": "bagues",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/ba_vilanova_1.jpg", "/images/ba_vilanova_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-anadia",
+    "nom": "Boucle D'oreille Anadia",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_anadia_1.jpg", "/images/bo_anadia_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-anca",
+    "nom": "Boucle D'oreille Anca",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_anca_1.jpg", "/images/bo_anca_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-arouca",
+    "nom": "Boucle D'oreille Arouca",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_arouca_1.jpg", "/images/bo_arouca_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-lousa",
+    "nom": "Boucle D'oreille Lousa",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_lousa_1.jpg", "/images/bo_lousa_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-luso",
+    "nom": "Boucle D'oreille Luso",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_luso_1.jpg", "/images/bo_luso_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-nazare",
+    "nom": "Boucle D'oreille Nazare",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_nazare_1.jpg", "/images/bo_nazare_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-seia",
+    "nom": "Boucle D'oreille Seia",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_seia_1.jpg", "/images/bo_seia_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-sintra",
+    "nom": "Boucle D'oreille Sintra",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_sintra_1.jpg", "/images/bo_sintra_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-tentugal",
+    "nom": "Boucle D'oreille Tentugal",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_tentugal_1.jpg", "/images/bo_tentugal_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "bo-viseu",
+    "nom": "Boucle D'oreille Viseu",
+    "categorie": "boucles",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/bo_viseu_1.jpg", "/images/bo_viseu_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-alfarelos",
+    "nom": "Bracelet Alfarelos",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_alfarelos_1.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-anadia",
+    "nom": "Bracelet Anadia",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_anadia_1.jpg", "/images/br_anadia_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-benedita",
+    "nom": "Bracelet Benedita",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_benedita_1.jpg", "/images/br_benedita_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-coimbra",
+    "nom": "Bracelet Coimbra",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_coimbra_1.jpg", "/images/br_coimbra_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-lourosa",
+    "nom": "Bracelet Lourosa",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_lourosa_1.jpg", "/images/br_lourosa_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-maia",
+    "nom": "Bracelet Maia",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_maia_1.jpg", "/images/br_maia_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-mira",
+    "nom": "Bracelet Mira",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_mira_1.jpg", "/images/br_mira_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-moreira",
+    "nom": "Bracelet Moreira",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_moreira_1.jpg", "/images/br_moreira_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-pataias",
+    "nom": "Bracelet Pataias",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_pataias_1.jpg", "/images/br_pataias_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "br-pedroso",
+    "nom": "Bracelet Pedroso",
+    "categorie": "bracelets",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/br_pedroso_1.jpg", "/images/br_pedroso_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-anadia",
+    "nom": "Collier Anadia",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_anadia_1.jpg", "/images/co_anadia_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-aveiro",
+    "nom": "Collier Aveiro",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_aveiro_1.jpg", "/images/co_aveiro_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-beja",
+    "nom": "Collier Beja",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_beja_1.jpg", "/images/co_beja_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-eivora",
+    "nom": "Collier Eivora",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_eivora_1.jpg", "/images/co_aivora_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-faro",
+    "nom": "Collier Faro",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_faro_1.jpg", "/images/co_faro_2jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-grandola",
+    "nom": "Collier Grandola",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_grandola_1.jpg", "/images/co_grandola_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-lourinha",
+    "nom": "Collier Lourinha",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_lourinha_1.jpg", "/images/co_lourinha_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-peniche",
+    "nom": "Collier Peniche",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_peniche_1.jpg", "/images/co_peniche_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-pereira",
+    "nom": "Collier Pereira",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_pereira_1.jpg", "/images/co_pereira_2.jpg"],
+    "materiaux": ["or", "argent"]
+  },
+  {
+    "id": "co-sines",
+    "nom": "Collier Sines",
+    "categorie": "colliers",
+    "prix": 25.00,
+    "description": "Pensé comme un précieux souvenir à porter au quotidien, ce bijou Casa Fátima allie élégance et durabilité. Fabriqué avec soin pour résister à la vie, il est doté d'une taille entièrement modulable afin de s'adapter parfaitement à vous. Une pièce lumineuse et intemporelle, conçue pour garder un bout de soleil portugais toujours près de soi.",
+    "images": ["/images/co_sines_1.jpg", "/images/co_sines_2.jpg"],
     "materiaux": ["or", "argent"]
   }
 ]
