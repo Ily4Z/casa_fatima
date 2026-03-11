@@ -1,8 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import catalogue from '../data/catalogue.json' with { type: "json" };
 import './Boutique.css';
 
 export default function Boutique() {
+  const navigate = useNavigate();
   const { categorie } = useParams();
 
   // 1. On enlève les charms de la boutique classique
@@ -47,7 +48,12 @@ export default function Boutique() {
               <div className="infos-produit">
                 <h3 className="nom-produit">{bijou.nom}</h3>
                 <p className="prix-produit">{bijou.prix.toFixed(2)} €</p>
-                <button className="btn-voir-produit">Découvrir</button>
+                <button 
+                  className="btn-voir-produit" 
+                  onClick={() => navigate(`/produit/${bijou.id}`)}
+                >
+                  Découvrir
+                </button>
               </div>
               
             </div>

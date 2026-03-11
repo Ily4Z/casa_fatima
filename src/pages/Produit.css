@@ -1,0 +1,180 @@
+.page-produit-container {
+  background-color: #F8F4EA;
+  min-height: 100vh;
+  padding: 40px 5%;
+}
+
+.btn-retour-boutique {
+  background: none;
+  border: none;
+  font-family: 'Arial', sans-serif;
+  color: #1A5B7E;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: transform 0.2s;
+}
+
+.btn-retour-boutique:hover {
+  transform: translateX(-5px);
+}
+
+.produit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.produit-image-grand {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.produit-infos-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.produit-titre {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.produit-prix-grand {
+  font-size: 1.8rem;
+  color: #c86b7b;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.separateur-dore {
+  height: 2px;
+  width: 60px;
+  background-color: #E5D5B5;
+  margin-bottom: 25px;
+}
+
+.produit-description-longue {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.produit-details {
+  background-color: #fcfcfc;
+  padding: 20px;
+  border-left: 3px solid #1A5B7E;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+  color: #444;
+}
+
+.produit-details p {
+  margin: 5px 0;
+}
+
+.btn-ajouter-grand {
+  background-color: #1A5B7E;
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-ajouter-grand:hover {
+  background-color: #124059;
+  transform: translateY(-2px);
+}
+
+.produit-introuvable {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* --- NOUVEAU : Style pour les options (Matière & Taille) --- */
+.options-produit {
+  background-color: #fcfcfc;
+  padding: 25px;
+  border: 1px solid #E5D5B5;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.option-groupe {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  color: #1A5B7E;
+  font-weight: bold;
+}
+
+.choix-boutons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-choix {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: #555;
+}
+
+.btn-choix:hover {
+  border-color: #c86b7b;
+}
+
+.btn-choix.actif {
+  background-color: #c86b7b; /* Rose Casa Fátima */
+  color: white;
+  border-color: #c86b7b;
+  box-shadow: 0 4px 10px rgba(200, 107, 123, 0.3);
+}
+
+.select-taille {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.select-taille:focus {
+  border-color: #1A5B7E;
+}

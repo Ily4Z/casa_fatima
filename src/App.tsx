@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 
 // Import de toutes tes pages
+import Produit from './pages/Produit';
 import Accueil from './pages/Accueil';
 import Boutique from './pages/Boutique';
 import Histoire from './pages/Histoire';
@@ -27,6 +28,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Accueil />} />
             {/* L'étoile permet d'attraper /boutique, /boutique/bagues, etc. */}
+            <Route path="/produit/:id" element={<Produit />} />
             <Route path="/boutique" element={<Boutique />} /> 
             <Route path="/boutique/:categorie" element={<Boutique />} />
             <Route path="/personnalisation" element={<Personnalisation />} />

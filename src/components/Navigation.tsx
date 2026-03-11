@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 export default function Navigation() {
-  // Gère l'ouverture du menu latéral (mobile)
   const [menuOuvert, setMenuOuvert] = useState(false);
-  // Gère l'ouverture du sous-menu "Nos Bijoux"
   const [bijouxOuvert, setBijouxOuvert] = useState(false);
+
+  // La petite fonction magique qui referme tout !
+  const fermerMenu = () => {
+    setMenuOuvert(false);
+    setBijouxOuvert(false);
+  };
 
   return (
     <header className="navbar">
-      {/* Barre supérieure visible en permanence */}
       <div className="navbar-top">
         <button 
           className="bouton-hamburger" 
@@ -20,28 +23,39 @@ export default function Navigation() {
         </button>
         
         <div className="logo-container">
-          <Link to="/">
+          {/* On ferme aussi le menu si on clique sur le logo */}
+          <Link to="/" onClick={fermerMenu}>
             <img src="/casa_fatima/images/logo_accueil.png" alt="Logo Casa Fátima" className="logo-image" />
           </Link>
         </div>
 
         <div className="icones-droite">
-          <Link to="/panier" className="icone" style={{ textDecoration: 'none', background: 'none', border: 'none' }}>🛒</Link>
-          <Link to="/authentification" className="icone" style={{ textDecoration: 'none', background: 'none', border: 'none' }}>👤</Link>
+          <Link to="/panier" className="icone-link" onClick={fermerMenu}>
+            {/* On utilise notre astuce BASE_URL pour que ça marche en local et sur GitHub */}
+            <img 
+              src={`${(import.meta as any).env.BASE_URL}images/logo_panier.png`} 
+              alt="Panier" 
+              className="icone-image" 
+            />
+          </Link>
+          <Link to="/authentification" className="icone-link" onClick={fermerMenu}>
+            <img 
+              src={`${(import.meta as any).env.BASE_URL}images/logo_compte.png`} 
+              alt="Mon Compte" 
+              className="icone-image" 
+            />
+          </Link>
         </div>
       </div>
 
-      {/* Le menu déroulant doré */}
       {menuOuvert && (
         <nav className="menu-dore">
           <ul className="liste-menu">
             
-            {/* L'accueil corrigé avec un Link */}
             <li className="item-menu">
-              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>ACCUEIL</Link>
+              <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}>ACCUEIL</Link>
             </li>
             
-            {/* Menu avec sous-catégories */}
             <li className="item-menu">
               <button 
                 className="bouton-sous-menu" 
@@ -50,36 +64,29 @@ export default function Navigation() {
                 NOS BIJOUX <span>{bijouxOuvert ? 'ʌ' : 'v'}</span>
               </button>
               
-              {/* Le sous-menu qui s'affiche au clic */}
               {bijouxOuvert && (
                 <ul className="sous-menu">
-                  <li>
-                    <Link to="/boutique" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      BOUTIQUE
-                    </Link>
-                  </li>
-                  {/* J'ai ajouté color: inherit pour éviter qu'ils ne deviennent bleus */}
-                  <li><Link to="/boutique/bagues" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> BAGUES</Link></li>
-                  <li><Link to="/boutique/bracelets" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> BRACELETS</Link></li>
-                  <li><Link to="/boutique/boucles" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> BOUCLES D'OREILLES</Link></li>
-                  <li><Link to="/boutique/colliers" style={{ textDecoration: 'none', color: 'inherit' }}><span>v</span> COLLIERS</Link></li>
+                  <li><Link to="/boutique" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}>BOUTIQUE</Link></li>
+                  <li><Link to="/boutique/bagues" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}><span>v</span> BAGUES</Link></li>
+                  <li><Link to="/boutique/bracelets" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}><span>v</span> BRACELETS</Link></li>
+                  <li><Link to="/boutique/boucles" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}><span>v</span> BOUCLES D'OREILLES</Link></li>
+                  <li><Link to="/boutique/colliers" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}><span>v</span> COLLIERS</Link></li>
                 </ul>
               )}
             </li>
 
-            {/* LES VOICI : J'ai remis les className="item-menu" ici ! */}
             <li className="item-menu">
-              <Link to="/personnalisation" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to="/personnalisation" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}>
                 PERSONNALISEZ VOTRE BIJOU
               </Link>
             </li>
             <li className="item-menu">
-              <Link to="/histoire" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to="/histoire" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}>
                 NOTRE HISTOIRE
               </Link>
             </li>
             <li className="item-menu">
-              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }} onClick={fermerMenu}>
                 CONTACT
               </Link>
             </li>

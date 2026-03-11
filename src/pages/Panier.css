@@ -1,0 +1,152 @@
+.panier-container {
+  background-color: #F8F4EA;
+  min-height: 100vh;
+  padding: 60px 5%;
+}
+
+.panier-titre {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  color: #1A5B7E;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.panier-vide {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #666;
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 50px;
+}
+
+.panier-layout {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.panier-liste {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panier-article {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  gap: 20px;
+}
+
+.article-image-mini img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.article-infos {
+  flex: 1;
+}
+
+.article-infos h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
+  margin: 0 0 5px 0;
+  color: #000;
+}
+
+.article-categorie {
+  color: #888;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.article-prix {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #c86b7b;
+}
+
+.btn-supprimer {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.btn-supprimer:hover {
+  color: #c86b7b;
+}
+
+.panier-recapitulatif {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #E5D5B5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 40px;
+}
+
+.panier-recapitulatif h2 {
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 0;
+  border-bottom: 1px solid #E5D5B5;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.recap-ligne {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+}
+
+.separateur {
+  height: 1px;
+  background: #E5D5B5;
+  margin: 20px 0;
+}
+
+.recap-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.btn-commander {
+  width: 100%;
+  background-color: #1A5B7E;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-commander:hover {
+  background-color: #124059;
+}

@@ -117,3 +117,23 @@
 .logo-image:hover {
   transform: scale(1.05); /* Petit effet de zoom élégant quand on passe la souris dessus */
 }
+
+/* --- NOUVEAU : Style pour les icônes dorées du menu --- */
+.icone-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.icone-link:hover {
+  transform: scale(1.1); /* Petit effet de zoom au survol */
+}
+
+.icone-image {
+  width: 35px; /* Modifie ce chiffre si tu les trouves trop petits ou trop grands */
+  height: auto;
+  object-fit: contain;
+}

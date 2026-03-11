@@ -10,13 +10,9 @@
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 250px; /* Hauteur réduite pour faire un vrai effet "bannière" fine */
-  
-  /* On charge TON image ici ! */
-  background-image: url('/casa_fatima/images/bann_accueil.png'); 
+  height: 250px; 
   background-size: cover;
-  background-position: center; /* Centre l'image pour voir le meilleur endroit */
-  
+  background-position: center; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,23 +21,18 @@
 .hero-content {
   text-align: center;
   width: 100%;
-  /* Optionnel : ajoute un très léger voile sombre derrière le texte pour qu'il soit toujours lisible peu importe ton image */
   background: rgba(0, 0, 0, 0.2); 
   padding: 40px 0;
 }
 
 .slogan {
-  /* On rend l'écriture beaucoup plus classe */
   font-family: 'Times New Roman', Times, serif; 
   font-size: 2.8rem;
   font-weight: normal;
-  font-style: italic; /* L'italique donne un côté très haut de gamme/bijouterie */
+  font-style: italic; 
   letter-spacing: 2px;
-  color: white; /* Ou #F4EBD0 si tu veux rappeler le beige sable ! */
-  
-  /* Une belle ombre portée pour que le texte ressorte parfaitement sur la photo */
+  color: white; 
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); 
-  
   margin-bottom: 20px;
 }
 
@@ -149,4 +140,133 @@
   font-size: 1.2rem;
   color: #000;
   font-weight: normal;
+}
+
+.accueil-container {
+  background-color: #FDFBF7; /* Couleur de fond beige clair/papier */
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.section-carrousel {
+  padding: 60px 0;
+  text-align: center;
+  overflow: hidden; /* Empêche la page de scroller sur le côté */
+}
+
+.carrousel-sous-titre {
+  font-family: 'Times New Roman', Times, serif;
+  color: #D4AF37; /* Doré */
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+
+.carrousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrousel-piste {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Style de base pour chaque carte --- */
+.slide {
+  position: absolute;
+  width: 260px;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.slide:hover img {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.slide h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  color: #000;
+  margin-top: 15px;
+  font-weight: normal;
+}
+
+/* --- Les positions magiques --- */
+.slide-centre {
+  transform: translateX(0) scale(1.1);
+  z-index: 3;
+  opacity: 1;
+}
+
+.slide-gauche {
+  transform: translateX(-320px) scale(0.85);
+  z-index: 2;
+  opacity: 0.8;
+  filter: brightness(0.8); /* Assombrit légèrement les côtés */
+}
+
+.slide-droite {
+  transform: translateX(320px) scale(0.85);
+  z-index: 2;
+  opacity: 0.8;
+  filter: brightness(0.8);
+}
+
+.slide-cachee {
+  transform: translateX(0) scale(0.5);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none; /* Empêche de cliquer dessus */
+}
+
+/* --- Les flèches de navigation bleu marine --- */
+.fleche-nav {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: #0c1542; /* Le bleu très foncé de ton image */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.fleche-nav:hover {
+  background-color: #1a2a6c;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.fleche-gauche {
+  left: 20px;
+}
+
+.fleche-droite {
+  right: 20px;
 }
