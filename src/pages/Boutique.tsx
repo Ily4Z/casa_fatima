@@ -38,7 +38,7 @@ export default function Boutique() {
               {/* On ajoute /casa_fatima devant pour que ça marche sur GitHub Pages */}
               <div className="conteneur-image">
                 <img 
-                  src={`/casa_fatima${bijou.images[0]}`} 
+                  src={`${(import.meta as any).env.BASE_URL}${bijou.images[0].substring(1)}`} 
                   alt={bijou.nom} 
                   className="image-produit" 
                 />
