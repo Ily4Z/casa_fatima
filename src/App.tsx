@@ -15,6 +15,8 @@ import Authentification from './pages/Authentification';
 import Footer from './components/Footer';
 import MentionsLegales from './pages/MentionsLegales';
 import Cgv from './pages/Cgv';
+import GuideTailles from './pages/GuideTailles.tsx';
+import Fidelite from './pages/Fidelite.tsx';
 
 // Import des styles globaux
 import './assets/global.css'; 
@@ -41,6 +43,8 @@ export default function App() {
             <Route path="/authentification" element={<Authentification />} />
             <Route path="/mentions-legales" element={<MentionsLegales />} />
             <Route path="/cgv" element={<Cgv />} />
+            <Route path="/guide-des-tailles" element={<GuideTailles />} />
+            <Route path="/programme-fidelite" element={<Fidelite />} />
           </Routes>
           <Footer />
         </main>

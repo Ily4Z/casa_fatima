@@ -1,0 +1,99 @@
+.page-info-container {
+  background-color: #EBE5DB;
+  min-height: 100vh;
+  padding: 60px 5%;
+  color: #0c1542;
+  font-family: 'Arial', sans-serif;
+}
+
+.page-info-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.titre-guide, .titre-fidelite {
+  text-align: center;
+  font-family: 'Times New Roman', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.sous-titre-guide {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+/* Layout Guide des Tailles */
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+}
+
+.guide-item {
+  margin-bottom: 40px;
+}
+
+.guide-item h3 {
+  border-bottom: 1px solid #0c1542;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.note-guide {
+  font-style: italic;
+  color: #c69c6d;
+}
+
+/* Tableaux */
+.tableau-tailles, .tableau-niveaux {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+}
+
+.tableau-tailles th, .tableau-tailles td, 
+.tableau-niveaux th, .tableau-niveaux td {
+  border: 1px solid #0c1542;
+  padding: 12px;
+  text-align: center;
+}
+
+.tableau-tailles th, .tableau-niveaux th {
+  background-color: rgba(12, 21, 66, 0.05);
+}
+
+/* Fidelite Box */
+.fidelite-box-principale {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+  border: 1px solid #0c1542;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.fidelite-avantages ul {
+  list-style: none;
+  padding: 0;
+}
+
+.btn-fidelite-cta {
+  display: block;
+  margin: 50px auto;
+  background-color: #3f51b5; /* Bleu du bouton sur ton image */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .guide-grid, .fidelite-box-principale {
+    grid-template-columns: 1fr;
+  }
+}

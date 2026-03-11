@@ -51,6 +51,7 @@ export default function Footer() {
             <ul>
               <li><Link to="/histoire">À propos de la marque</Link></li>
               <li><Link to="/personnalisation">Nos personnalisations</Link></li>
+              <li><Link to="/programme-fidelite">Programme de fidélité</Link></li>
             </ul>
           </div>
 
@@ -69,8 +70,8 @@ export default function Footer() {
             <ul>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/cgv">CGV</Link></li>
-              {/* J'ajoute les mentions légales qui étaient sous-entendues */}
               <li><Link to="/mentions-legales">Mentions légales</Link></li>
+              <li><Link to="/guide-des-tailles">Guide des tailles</Link></li>
             </ul>
           </div>
 
