@@ -12,6 +12,9 @@ import Personnalisation from './pages/Personnalisation';
 import Contact from './pages/Contact';
 import Panier from './pages/Panier';
 import Authentification from './pages/Authentification';
+import Footer from './components/Footer';
+import MentionsLegales from './pages/MentionsLegales';
+import Cgv from './pages/Cgv';
 
 // Import des styles globaux
 import './assets/global.css'; 
@@ -36,7 +39,10 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/panier" element={<Panier />} />
             <Route path="/authentification" element={<Authentification />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/cgv" element={<Cgv />} />
           </Routes>
+          <Footer />
         </main>
       </div>
     </Router>

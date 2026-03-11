@@ -1,0 +1,154 @@
+/* Fond texturé beige de la page entière */
+.page-contact-bg {
+  background-color: #EBE5DB; /* Couleur beige similaire à ton image */
+  min-height: 100vh;
+  padding: 60px 5%;
+  color: #0c1542; /* Le bleu marine foncé */
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Typographie principale */
+.titre-contact-main {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.sous-titre-contact {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.texte-intro-contact {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+/* La grille pour séparer Nom/Tel et les infos de contact */
+.contact-colonnes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 30px;
+}
+
+.colonne-formulaire, .partie-basse-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Les groupes (Label + Input) */
+.champ-groupe {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.champ-groupe label {
+  font-size: 0.9rem;
+  margin-left: 15px; /* Aligne le texte avec l'arrondi de l'input */
+  text-transform: uppercase;
+}
+
+.etoile {
+  color: #d9534f; /* L'étoile rouge obligatoire */
+  margin-left: 3px;
+}
+
+/* Les champs arrondis (effet pilule) */
+.input-arrondi {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 50px;
+  border: none;
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* La zone de commentaire */
+.textarea-arrondi {
+  width: 100%;
+  padding: 25px;
+  border-radius: 40px;
+  border: none;
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  resize: vertical;
+}
+
+.input-arrondi:focus, .textarea-arrondi:focus {
+  box-shadow: 0 0 0 2px #0c1542; /* Contour bleu au clic */
+}
+
+/* Colonne des informations de droite */
+.colonne-infos {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.info-lignes-contact {
+  margin: 20px 0;
+}
+
+.info-ligne {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.info-icon {
+  font-size: 1.2rem;
+}
+
+.sav-horaires {
+  margin-top: 30px;
+}
+
+.sav-horaires p {
+  margin: 5px 0;
+}
+
+/* Le bouton ENVOYER carré */
+.btn-envoyer-carre {
+  background-color: #000033; /* Bleu très foncé presque noir */
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start; /* Garde le bouton à gauche */
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-envoyer-carre:hover {
+  background-color: #1a2a6c;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .contact-colonnes {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .colonne-infos {
+    border-top: 1px dashed #ccc;
+    padding-top: 30px;
+  }
+}

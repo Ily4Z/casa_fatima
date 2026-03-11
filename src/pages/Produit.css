@@ -1,180 +1,264 @@
-.page-produit-container {
-  background-color: #F8F4EA;
+.page-produit-moderne {
+  background-color: #ffffff; /* Fond blanc très épuré */
   min-height: 100vh;
   padding: 40px 5%;
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
-.btn-retour-boutique {
+.btn-retour-simple {
   background: none;
   border: none;
-  font-family: 'Arial', sans-serif;
-  color: #1A5B7E;
   font-size: 1rem;
+  color: #0c1542;
   cursor: pointer;
-  margin-bottom: 30px;
-  transition: transform 0.2s;
+  margin-bottom: 40px;
 }
 
-.btn-retour-boutique:hover {
-  transform: translateX(-5px);
-}
-
-.produit-grid {
+.layout-produit {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
   max-width: 1200px;
   margin: 0 auto;
-  background: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.produit-image-grand {
+/* --- COLONNE GAUCHE : Galerie --- */
+.galerie-images {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.miniatures-colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.miniature {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.miniature:hover {
+  opacity: 0.8;
+}
+
+.miniature.active {
+  opacity: 1;
+  border: 1px solid #0c1542; /* Met en valeur l'image sélectionnée */
+}
+
+.image-principale-cadre {
+  flex: 1;
+  /* On recrée un cadre élégant autour de l'image (comme sur le modèle) */
+  padding: 5px;
+  border: 1px solid #e0e0e0; 
+  background-color: #fafafa;
+}
+
+.image-principale {
   width: 100%;
   height: auto;
-  border-radius: 5px;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 
-.produit-infos-wrapper {
+/* --- COLONNE DROITE : Infos --- */
+.infos-produit-moderne {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
-.produit-titre {
+.titre-produit {
   font-family: 'Times New Roman', Times, serif;
   font-size: 3rem;
+  font-weight: bold;
   color: #000;
-  margin-bottom: 15px;
+  margin: 0 0 10px 0;
 }
 
-.produit-prix-grand {
-  font-size: 1.8rem;
-  color: #c86b7b;
-  font-weight: bold;
-  margin-bottom: 25px;
-}
-
-.separateur-dore {
-  height: 2px;
-  width: 60px;
-  background-color: #E5D5B5;
-  margin-bottom: 25px;
-}
-
-.produit-description-longue {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 30px;
-  text-align: justify;
-}
-
-.produit-details {
-  background-color: #fcfcfc;
-  padding: 20px;
-  border-left: 3px solid #1A5B7E;
+.prix-produit {
+  font-size: 1.5rem;
+  color: #666;
   margin-bottom: 40px;
-  font-family: 'Arial', sans-serif;
-  color: #444;
 }
 
-.produit-details p {
-  margin: 5px 0;
-}
-
-.btn-ajouter-grand {
-  background-color: #1A5B7E;
-  color: #fff;
-  border: none;
-  padding: 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-ajouter-grand:hover {
-  background-color: #124059;
-  transform: translateY(-2px);
-}
-
-.produit-introuvable {
-  text-align: center;
-  padding: 100px 20px;
-}
-
-/* --- NOUVEAU : Style pour les options (Matière & Taille) --- */
-.options-produit {
-  background-color: #fcfcfc;
-  padding: 25px;
-  border: 1px solid #E5D5B5;
-  border-radius: 8px;
+.section-option {
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
-.option-groupe {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.option-label {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.1rem;
+.label-option {
+  display: block;
+  font-size: 1rem;
   color: #1A5B7E;
-  font-weight: bold;
+  margin-bottom: 12px;
 }
 
-.choix-boutons {
+/* Boutons de couleurs */
+.boutons-couleur {
   display: flex;
   gap: 15px;
 }
 
-.btn-choix {
+.btn-couleur {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   background: white;
   border: 1px solid #ccc;
-  padding: 10px 25px;
-  border-radius: 25px;
+  padding: 10px 20px;
+  border-radius: 12px;
   cursor: pointer;
-  font-family: 'Arial', sans-serif;
-  text-transform: capitalize;
+  transition: all 0.2s;
+}
+
+.btn-couleur.actif {
+  border: 2px solid #000;
+  padding: 9px 19px; /* Compense la bordure plus épaisse */
+}
+
+/* Création des petites boules de couleur Or et Argent en CSS ! */
+.pastille-couleur {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.pastille-couleur.or {
+  background: linear-gradient(135deg, #F9D976, #E2B04A);
+}
+
+.pastille-couleur.argent {
+  background: linear-gradient(135deg, #E0E0E0, #9E9E9E);
+}
+
+.texte-couleur {
   font-size: 0.95rem;
-  transition: all 0.3s ease;
-  color: #555;
-}
-
-.btn-choix:hover {
-  border-color: #c86b7b;
-}
-
-.btn-choix.actif {
-  background-color: #c86b7b; /* Rose Casa Fátima */
-  color: white;
-  border-color: #c86b7b;
-  box-shadow: 0 4px 10px rgba(200, 107, 123, 0.3);
-}
-
-.select-taille {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: 'Arial', sans-serif;
-  font-size: 1rem;
   color: #333;
-  outline: none;
-  cursor: pointer;
-  background-color: white;
 }
 
-.select-taille:focus {
-  border-color: #1A5B7E;
+/* Sélecteur de taille */
+.selecteur-taille {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 200px;
+  background: white;
+}
+
+/* Barre d'actions (Quantité + Boutons) */
+.barre-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.selecteur-quantite {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 8px 15px;
+}
+
+.selecteur-quantite button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.btn-ajouter-rose {
+  background-color: #0c1542; /* J'ai mis ton bleu marine pour rester dans le thème, mais tu peux remplacer par #ffb6c1 pour du rose ! */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 40px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s;
+}
+
+.btn-ajouter-rose:hover {
+  background-color: #1a2a6c;
+}
+
+.btn-favori {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Accordéons (Description / Livraison) */
+.accordeons-wrapper {
+  margin-top: 50px;
+  border-top: 1px solid #000;
+}
+
+.accordeon-titre {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+}
+
+.fleche-accordeon {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: inline-block;
+  transform: rotate(-90deg); /* Flèche pointe vers la droite par défaut */
+  transition: transform 0.3s ease;
+}
+
+.fleche-accordeon.ouverte {
+  transform: rotate(0deg); /* Pointe vers le bas quand ouvert */
+}
+
+.accordeon-contenu {
+  padding: 20px 0;
+  color: #555;
+  line-height: 1.6;
+  border-bottom: 1px solid #000;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 900px) {
+  .layout-produit {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .barre-actions {
+    flex-wrap: wrap;
+  }
 }

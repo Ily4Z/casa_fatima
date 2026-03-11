@@ -1,20 +1,55 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import catalogue from '../data/catalogue.json';
 import './Personnalisation.css';
+
+// --- 1. On définit nos deux bases ---
+const bases = [
+  { id: 'base-collier', nom: 'Collier Chaîne Fine', prix: 45.00, image: 'images/presentation_perso.png' },
+  { id: 'base-bracelet', nom: 'Bracelet Maille', prix: 35.00, image: 'images/br_moreira_1.png' }
+];
+
+// --- 2. On génère automatiquement les 15 charms ---
+// Tous à 9€ (tu peux modifier ce prix !)
+const charms = Array.from({ length: 15 }, (_, i) => ({
+  id: `charm-${i + 1}`,
+  nom: `Charm ${i + 1}`,
+  prix: 9.00,
+  image: `images/charms_${i + 1}.png`
+}));
 
 export default function Personnalisation() {
   const navigate = useNavigate();
-  const bases = catalogue.filter(bijou => bijou.categorie.includes('base'));
-  const charms = catalogue.filter(bijou => bijou.categorie === 'charm');
 
   const [baseChoisie, setBaseChoisie] = useState(bases[0]);
   const [charmsChoisis, setCharmsChoisis] = useState<any[]>([]);
 
-  const prixTotal = (baseChoisie?.prix || 0) + charmsChoisis.reduce((total, charm) => total + charm.prix, 0);
+  const prixTotal = baseChoisie.prix + charmsChoisis.reduce((total, charm) => total + charm.prix, 0);
 
   const ajouterCharm = (charm: any) => setCharmsChoisis([...charmsChoisis, charm]);
   const retirerCharm = (index: number) => setCharmsChoisis(charmsChoisis.filter((_, i) => i !== index));
+
+  // Fonction pour envoyer la création dans le VRAI panier
+  const ajouterAuPanier = () => {
+    const panierActuel = JSON.parse(localStorage.getItem('casa_fatima_panier') || '[]');
+    
+    // On crée un article spécial "Création sur-mesure"
+    const creationUnique = {
+      id: `perso-${Date.now()}`,
+      nom: `Création : ${baseChoisie.nom}`,
+      categorie: 'personnalisation',
+      prix: prixTotal,
+      images: [`/${baseChoisie.image}`], // On utilise l'image de la base pour le panier
+      description: `Bijou personnalisé comprenant la base et ${charmsChoisis.length} charm(s).`,
+      choixMateriau: 'Sur-mesure',
+      charms: charmsChoisis // On garde les charms en mémoire
+    };
+    
+    panierActuel.push(creationUnique);
+    localStorage.setItem('casa_fatima_panier', JSON.stringify(panierActuel));
+    
+    alert("✨ Votre création unique a été ajoutée au panier !");
+    navigate('/panier');
+  };
 
   return (
     <div className="atelier-container">
@@ -38,12 +73,12 @@ export default function Personnalisation() {
               {bases.map(base => (
                 <button 
                   key={base.id} 
-                  className={`carte-choix ${baseChoisie?.id === base.id ? 'active' : ''}`}
+                  className={`carte-choix ${baseChoisie.id === base.id ? 'active' : ''}`}
                   onClick={() => setBaseChoisie(base)}
                 >
-                  <div className="image-simulee"></div>
+                  <img src={`${(import.meta as any).env.BASE_URL}${base.image}`} alt={base.nom} className="image-choix" />
                   <span className="nom-item">{base.nom}</span>
-                  <span className="prix-item">+{base.prix}€</span>
+                  <span className="prix-item">{base.prix}€</span>
                 </button>
               ))}
             </div>
@@ -59,7 +94,7 @@ export default function Personnalisation() {
                   className="carte-choix charm-btn"
                   onClick={() => ajouterCharm(charm)}
                 >
-                  <div className="image-simulee petite"></div>
+                  <img src={`${(import.meta as any).env.BASE_URL}${charm.image}`} alt={charm.nom} className="image-choix petite" />
                   <span className="nom-item">{charm.nom}</span>
                   <span className="prix-item">+{charm.prix}€</span>
                 </button>
@@ -75,8 +110,8 @@ export default function Personnalisation() {
             
             <div className="recap-contenu">
               <div className="recap-info">
-                <strong>Base : {baseChoisie?.nom}</strong>
-                <span className="recap-prix">{baseChoisie?.prix.toFixed(2)} €</span>
+                <strong>Base : {baseChoisie.nom}</strong>
+                <span className="recap-prix">{baseChoisie.prix.toFixed(2)} €</span>
               </div>
 
               <div className="recap-charms">
@@ -88,6 +123,7 @@ export default function Personnalisation() {
                   <ul className="liste-charms">
                     {charmsChoisis.map((charm, index) => (
                       <li key={index} className="charm-selectionne">
+                        <img src={`${(import.meta as any).env.BASE_URL}${charm.image}`} alt="mini-charm" className="mini-charm-recap" />
                         <span>{charm.nom}</span>
                         <div className="charm-actions">
                           <span className="charm-prix">{charm.prix.toFixed(2)} €</span>
@@ -105,9 +141,8 @@ export default function Personnalisation() {
                 <span>Total</span>
                 <span className="prix-total">{prixTotal.toFixed(2)} €</span>
               </div>
-              <button className="btn-ajouter-panier" onClick={() => { alert("✨ Votre création unique a été ajoutée au panier !");
-                navigate('/panier'); // Redirige instantanément vers la page Panier
-                }}> AJOUTER AU PANIER
+              <button className="btn-ajouter-panier" onClick={ajouterAuPanier}> 
+                AJOUTER AU PANIER
               </button>
             </div>
           </div>

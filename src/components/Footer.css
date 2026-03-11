@@ -1,0 +1,222 @@
+.site-footer {
+  position: relative;
+  background-color: #F8F4EA; /* Beige texturé */
+  color: #0c1542; /* Bleu marine Casa Fátima */
+  font-family: 'Arial', sans-serif;
+  margin-top: 50px;
+  display: flex;
+}
+
+/* La bordure Azulejos à gauche */
+.azulejo-border {
+  width: 60px;
+  background-size: contain;
+  background-repeat: repeat-y;
+  border-right: 1px solid #0c1542;
+  flex-shrink: 0;
+}
+
+.footer-contenu-global {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- 1. RÉASSURANCE --- */
+.footer-reassurance {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px 3%;
+  text-align: center;
+  border-bottom: 1px solid #0c1542;
+}
+
+.reassurance-item h4 {
+  font-size: 0.95rem;
+  color: #0c1542;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.reassurance-item p {
+  font-size: 0.95rem;
+  color: #c69c6d; /* Doré */
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- 2. COLONNES LIENS --- */
+.footer-liens-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 50px 3%;
+  border-bottom: 1px solid #0c1542;
+}
+
+.footer-colonne h4 {
+  font-size: 1rem;
+  color: #0c1542;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.footer-colonne ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-colonne a {
+  text-decoration: none;
+  color: #c69c6d;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-colonne a:hover {
+  color: #0c1542;
+}
+
+/* Newsletter */
+.newsletter-col p {
+  color: #c69c6d;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 250px;
+}
+
+.newsletter-form input {
+  padding: 12px 15px;
+  border: 1px solid #0c1542;
+  border-radius: 25px;
+  background: transparent;
+  color: #0c1542;
+  outline: none;
+  font-family: 'Arial', sans-serif;
+}
+
+.newsletter-form input::placeholder {
+  color: #c69c6d;
+}
+
+.newsletter-form button {
+  background-color: #0c1542;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #1a2a6c;
+}
+
+/* --- 3. BARRE DU BAS --- */
+.footer-bottom {
+  padding: 20px 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-sociaux {
+  display: flex;
+  gap: 15px;
+}
+
+.icone-reseau {
+  background-color: #0c1542;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: serif;
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.icone-reseau:hover {
+  transform: scale(1.1);
+}
+
+.footer-barre-legale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #c69c6d;
+  font-size: 0.95rem;
+}
+
+.moyens-paiement {
+  display: flex;
+  gap: 8px;
+}
+
+/* Petits faux badges de paiement */
+.badge-pay {
+  background: white;
+  color: #0c1542;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.badge-pay.alma {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+}
+
+/* Responsive pour mobiles et tablettes */
+@media (max-width: 1024px) {
+  .footer-liens-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-reassurance {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .azulejo-border {
+    display: none; /* Cache la bordure sur les petits écrans */
+  }
+  .footer-reassurance, .footer-liens-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .newsletter-form {
+    margin: 0 auto;
+  }
+  .footer-sociaux {
+    justify-content: center;
+  }
+  .footer-barre-legale {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
