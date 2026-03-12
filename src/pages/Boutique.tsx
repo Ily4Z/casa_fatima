@@ -3,57 +3,59 @@ import catalogue from '../data/catalogue.json' with { type: "json" };
 import './Boutique.css';
 
 export default function Boutique() {
-  const navigate = useNavigate();
   const { categorie } = useParams();
+  const navigate = useNavigate();
 
-  // 1. On enlève les charms de la boutique classique
   let bijouxAffiches = catalogue.filter(bijou => bijou.categorie !== 'charm');
 
-  // 2. Si on a cliqué sur une catégorie précise, on filtre
   if (categorie) {
     bijouxAffiches = bijouxAffiches.filter(bijou => bijou.categorie === categorie);
   }
 
-  // Gère le titre de la page de manière élégante
   const titrePage = categorie 
     ? categorie.charAt(0).toUpperCase() + categorie.slice(1) 
-    : "Toute notre collection";
+    : "Nos Collections";
 
   return (
-    <div className="boutique-container">
-      <div className="boutique-header">
-        <h1 className="titre-page">{titrePage}</h1>
-        <p className="sous-titre-page">Découvrez nos créations artisanales, pensées pour vous.</p>
+    <div className="boutique-luxe-container">
+      <div className="boutique-luxe-header">
+        <h1 className="titre-luxe">{titrePage}</h1>
+        <p className="sous-titre-luxe">Des pièces uniques, pensées pour traverser le temps.</p>
       </div>
       
       {bijouxAffiches.length === 0 ? (
-        <p className="message-vide">
-          Aucun bijou trouvé dans cette catégorie pour le moment.
-        </p>
+        <p className="message-vide">L'atelier prépare de nouvelles merveilles pour cette catégorie.</p>
       ) : (
-        <div className="grille-produits">
+        <div className="grille-luxe">
           {bijouxAffiches.map((bijou) => (
-            <div key={bijou.id} className="carte-produit">
+            <div 
+              key={bijou.id} 
+              className="carte-luxe"
+              onClick={() => navigate(`/produit/${bijou.id}`)}
+            >
               
-              {/* C'est ici qu'on affiche la VRAIE image ! */}
-              {/* On ajoute /casa_fatima devant pour que ça marche sur GitHub Pages */}
-              <div className="conteneur-image">
+              <div className="conteneur-image-luxe">
+                {/* Première image (toujours visible) */}
                 <img 
                   src={`${(import.meta as any).env.BASE_URL}${bijou.images[0].substring(1)}`} 
                   alt={bijou.nom} 
-                  className="image-produit" 
+                  className="img-luxe principale" 
                 />
+                
+                {/* Deuxième image (visible au survol, si elle existe) */}
+                {bijou.images[1] && (
+                  <img 
+                    src={`${(import.meta as any).env.BASE_URL}${bijou.images[1].substring(1)}`} 
+                    alt={`${bijou.nom} porté`} 
+                    className="img-luxe secondaire" 
+                  />
+                )}
               </div>
 
-              <div className="infos-produit">
-                <h3 className="nom-produit">{bijou.nom}</h3>
-                <p className="prix-produit">{bijou.prix.toFixed(2)} €</p>
-                <button 
-                  className="btn-voir-produit" 
-                  onClick={() => navigate(`/produit/${bijou.id}`)}
-                >
-                  Découvrir
-                </button>
+              <div className="infos-luxe">
+                <h3 className="nom-luxe">{bijou.nom}</h3>
+                <p className="prix-luxe">{bijou.prix.toFixed(2)} €</p>
+                <span className="lien-decouvrir">Découvrir</span>
               </div>
               
             </div>

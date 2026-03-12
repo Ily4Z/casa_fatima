@@ -52,7 +52,7 @@ export default function Accueil() {
       {/* --------------------------- */}
 
       <section className="section-carrousel">
-        <h2 className="carrousel-sous-titre">Des bijoux de famille inspirés par nos racines. Pensées par les sœurs Madeira en hommage à notre grand-mère Fátima, nos créations en acier inoxydable se portent comme une seconde peau : un lien précieux entre vos souvenirs, vos traditions et les moments dorés de la vie</h2>
+        <h2 className="carrousel-sous-titre"> ✧ ❁ ✧ Des bijoux de famille inspirés par nos racines. Pensées par les sœurs Madeira en hommage à notre grand-mère Fátima, nos créations en acier inoxydable se portent comme une seconde peau : un lien précieux entre vos souvenirs, vos traditions et les moments dorés de la vie</h2>
         
         <div className="carrousel-wrapper">
           {/* Flèche Gauche */}

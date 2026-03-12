@@ -1,30 +1,149 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Authentification.css';
 
 export default function Authentification() {
-  const [estInscription, setEstInscription] = useState(false);
+  const navigate = useNavigate();
+  
+  // États pour savoir si on affiche "Connexion" ou "Inscription"
+  const [estModeConnexion, setEstModeConnexion] = useState(true);
+  
+  // États pour les champs du formulaire
+  const [email, setEmail] = useState('');
+  const [motDePasse, setMotDePasse] = useState('');
+  const [nom, setNom] = useState('');
 
+  // État pour savoir si l'utilisateur est connecté
+  const [utilisateurConnecte, setUtilisateurConnecte] = useState<any>(null);
+
+  // Vérifie au chargement si quelqu'un est déjà "connecté" dans la mémoire
+  useEffect(() => {
+    const session = localStorage.getItem('casa_fatima_user');
+    if (session) {
+      setUtilisateurConnecte(JSON.parse(session));
+    }
+  }, []);
+
+  const gererSoumission = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // On simule la création ou la connexion en sauvegardant un faux utilisateur
+    const fauxUtilisateur = {
+      nom: estModeConnexion ? "Maria" : nom, // Donne "Maria" par défaut si connexion simple
+      email: email,
+      pointsFidelite: 250
+    };
+
+    localStorage.setItem('casa_fatima_user', JSON.stringify(fauxUtilisateur));
+    setUtilisateurConnecte(fauxUtilisateur);
+    
+    // On nettoie les champs
+    setEmail('');
+    setMotDePasse('');
+    setNom('');
+  };
+
+  const seDeconnecter = () => {
+    localStorage.removeItem('casa_fatima_user');
+    setUtilisateurConnecte(null);
+  };
+
+  // --- AFFICHAGE SI CONNECTÉ ---
+  if (utilisateurConnecte) {
+    return (
+      <div className="auth-container">
+        <div className="compte-dashboard">
+          <h1 className="titre-auth">Mon Compte</h1>
+          <h2 className="bienvenue-texte">Bonjour {utilisateurConnecte.nom} ✨</h2>
+          
+          <div className="compte-grille">
+            <div className="compte-carte">
+              <h3>Mes Éclats de Fidélité</h3>
+              <p className="points-fidelite">{utilisateurConnecte.pointsFidelite} Éclats</p>
+              <button className="btn-secondaire" onClick={() => navigate('/programme-fidelite')}>Voir mes avantages</button>
+            </div>
+            
+            <div className="compte-carte">
+              <h3>Mes Commandes</h3>
+              <p>Vous n'avez pas encore de commande en cours.</p>
+              <button className="btn-secondaire" onClick={() => navigate('/boutique')}>Découvrir nos bijoux</button>
+            </div>
+          </div>
+
+          <button className="btn-deconnexion" onClick={seDeconnecter}>Se déconnecter</button>
+        </div>
+      </div>
+    );
+  }
+
+  // --- AFFICHAGE SI NON CONNECTÉ (Formulaire) ---
   return (
-    <div style={{ maxWidth: '400px', margin: '80px auto', padding: '0 20px', textAlign: 'center' }}>
-      <h1 style={{ fontFamily: 'Times New Roman' }}>{estInscription ? 'Créer un compte' : 'Se connecter'}</h1>
-      
-      <form style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '30px' }}>
-        {estInscription && (
-          <input type="text" placeholder="Prénom et Nom" style={{ padding: '15px', border: '1px solid #ccc' }} />
-        )}
-        <input type="email" placeholder="Email" style={{ padding: '15px', border: '1px solid #ccc' }} />
-        <input type="password" placeholder="Mot de passe" style={{ padding: '15px', border: '1px solid #ccc' }} />
-        
-        <button type="button" style={{ backgroundColor: '#1A5B7E', color: 'white', padding: '15px', border: 'none', cursor: 'pointer' }}>
-          {estInscription ? 'S\'INSCRIRE' : 'CONNEXION'}
-        </button>
-      </form>
+    <div className="auth-container">
+      <div className="auth-wrapper">
+        <div className="auth-header">
+          <button 
+            className={`auth-onglet ${estModeConnexion ? 'actif' : ''}`}
+            onClick={() => setEstModeConnexion(true)}
+          >
+            CONNEXION
+          </button>
+          <button 
+            className={`auth-onglet ${!estModeConnexion ? 'actif' : ''}`}
+            onClick={() => setEstModeConnexion(false)}
+          >
+            CRÉER UN COMPTE
+          </button>
+        </div>
 
-      <button 
-        onClick={() => setEstInscription(!estInscription)} 
-        style={{ background: 'none', border: 'none', color: '#666', textDecoration: 'underline', marginTop: '20px', cursor: 'pointer' }}
-      >
-        {estInscription ? 'Déjà un compte ? Connectez-vous' : 'Pas encore de compte ? Créer un compte'}
-      </button>
+        <form className="auth-form" onSubmit={gererSoumission}>
+          {!estModeConnexion && (
+            <div className="champ-groupe">
+              <label htmlFor="nom">Prénom & Nom</label>
+              <input 
+                type="text" 
+                id="nom" 
+                required 
+                value={nom} 
+                onChange={(e) => setNom(e.target.value)} 
+                className="input-arrondi" 
+                placeholder="Ex: Maria Silva"
+              />
+            </div>
+          )}
+
+          <div className="champ-groupe">
+            <label htmlFor="email">E-mail</label>
+            <input 
+              type="email" 
+              id="email" 
+              required 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
+              className="input-arrondi" 
+            />
+          </div>
+
+          <div className="champ-groupe">
+            <label htmlFor="password">Mot de passe</label>
+            <input 
+              type="password" 
+              id="password" 
+              required 
+              value={motDePasse} 
+              onChange={(e) => setMotDePasse(e.target.value)} 
+              className="input-arrondi" 
+            />
+          </div>
+
+          <button type="submit" className="btn-envoyer-carre full-width">
+            {estModeConnexion ? "SE CONNECTER" : "VALIDER L'INSCRIPTION"}
+          </button>
+          
+          {estModeConnexion && (
+            <p className="mot-de-passe-oublie">Mot de passe oublié ?</p>
+          )}
+        </form>
+      </div>
     </div>
   );
 }

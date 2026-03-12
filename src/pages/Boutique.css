@@ -1,114 +1,127 @@
-.boutique-container {
-  background-color: #F8F4EA; /* Beige sable */
+.boutique-luxe-container {
+  background-color: #FDFBF7; /* Un blanc "coquille d'œuf" ultra lumineux et luxueux */
   min-height: 100vh;
-  padding: 60px 5%;
+  padding: 80px 5%;
 }
 
-.boutique-header {
+.boutique-luxe-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
-.titre-page {
+.titre-luxe {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 3rem;
-  color: #1A5B7E; /* Bleu azulejo */
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  color: #0c1542; /* Ton bleu marine */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 5px; /* L'espacement des lettres crée le côté "marque de luxe" */
+  font-weight: normal;
 }
 
-.sous-titre-page {
-  font-family: 'Arial', sans-serif;
-  color: #666;
+.sous-titre-luxe {
+  font-family: 'Times New Roman', Times, serif;
+  color: #888;
+  font-size: 1.2rem;
   font-style: italic;
+  letter-spacing: 1px;
 }
 
-.grille-produits {
+.grille-luxe {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 80px 40px; /* Beaucoup d'espace vertical pour respirer */
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-.carte-produit {
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* La carte n'a plus de fond ni de bordure */
+.carte-luxe {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
 }
 
-.carte-produit:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(26, 91, 126, 0.15);
-}
-
-.conteneur-image {
+.conteneur-image-luxe {
   width: 100%;
-  height: 300px; /* Hauteur fixe pour que toutes les cartes fassent la même taille */
+  aspect-ratio: 4 / 5; /* Format portrait façon magazine de mode */
   overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5; /* Fond léger en attendant le chargement */
+  margin-bottom: 25px;
 }
 
-.image-produit {
+.img-luxe {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Coupe joliment l'image sans la déformer */
-  transition: transform 0.5s ease;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.8s ease, transform 1.5s ease; /* Transition très douce */
 }
 
-.carte-produit:hover .image-produit {
-  transform: scale(1.05); /* Zoom très léger au survol */
+/* --- LA MAGIE DU SURVOL --- */
+.img-luxe.secondaire {
+  opacity: 0;
 }
 
-.infos-produit {
-  padding: 25px 20px;
-  text-align: center;
+/* Au survol, on montre la 2ème image et on fait un zoom très lent */
+.carte-luxe:hover .img-luxe.secondaire {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.carte-luxe:hover .img-luxe.principale {
+  opacity: 0;
+}
+
+/* S'il n'y a qu'une seule image, on zoome juste doucement */
+.carte-luxe:hover .img-luxe.principale:only-child {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* --- INFOS --- */
+.infos-luxe {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  align-items: center;
 }
 
-.nom-produit {
+.nom-luxe {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.4rem;
-  color: #000;
-  margin-bottom: 10px;
+  color: #0c1542;
+  margin: 0 0 10px 0;
+  font-weight: normal;
 }
 
-.prix-produit {
+.prix-luxe {
   font-family: 'Arial', sans-serif;
-  color: #c86b7b; /* Rose Casa Fátima */
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
-.btn-voir-produit {
-  margin-top: auto; /* Pousse le bouton en bas de la carte */
-  background: transparent;
-  border: 1px solid #1A5B7E;
-  color: #1A5B7E;
-  padding: 10px 20px;
-  border-radius: 25px;
-  cursor: pointer;
+/* Le bouton devient un trait élégant qui apparaît au survol */
+.lien-decouvrir {
   font-family: 'Arial', sans-serif;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  color: #c69c6d; /* Ton doré */
+  border-bottom: 1px solid #c69c6d;
+  padding-bottom: 3px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
 }
 
-.btn-voir-produit:hover {
-  background: #1A5B7E;
-  color: #fff;
-}
-
-.message-vide {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #888;
-  margin-top: 50px;
-  font-style: italic;
+.carte-luxe:hover .lien-decouvrir {
+  opacity: 1;
+  transform: translateY(0);
 }
