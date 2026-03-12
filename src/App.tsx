@@ -17,6 +17,7 @@ import MentionsLegales from './pages/MentionsLegales';
 import Cgv from './pages/Cgv';
 import GuideTailles from './pages/GuideTailles.tsx';
 import Fidelite from './pages/Fidelite.tsx';
+import ScrollToTop from './components/ScrollToTop';
 
 // Import des styles globaux
 import './assets/global.css'; 
@@ -24,6 +25,8 @@ import './assets/global.css';
 export default function App() {
   return (
     <Router>
+      {/* Notre ascenseur magique qui remonte en haut à chaque clic */}
+      <ScrollToTop />
       <div className="app-container">
         {/* La navigation reste toujours visible en haut */}
         <Navigation />
